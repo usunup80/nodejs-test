@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List Page</title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <td>id</td>
+                <td>name</td>
+            </tr>
+            <% data.forEach(function (item, index) { %>
+            <tr>
+                <td>
+                    <%= item.id %>
+                </td>
+                <td>
+                    <%= item.name %>
+                </td>
+            </tr>
+            <% }); %>
+        </table>
+    </body>
+</html>
