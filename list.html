@@ -4,19 +4,26 @@
         <title>List Page</title>
     </head>
     <body>
+        <h1>출석부</h1>
         <table border="1">
             <tr>
-                <td>id</td>
-                <td>name</td>
+                <td></td>
+                <td></td>
+                <% dateArr.forEach(function (item, index) { %>
+                    <td width="50"><%= item %></td>
+                <% }); %>
             </tr>
-            <% data.forEach(function (item, index) { %>
+            <% students.forEach(function (item, index) { %>
             <tr>
                 <td>
-                    <%= item.id %>
+                    <%= item.student_num %>
                 </td>
                 <td>
                     <%= item.name %>
                 </td>
+                <% for(var i=0; i < dateArr.length; i++) { var day = dateArr[i];%>
+                    <td><%= dateArr[i] in data ? (data[day].indexOf(item.student_num) >=0 ? '출석' : '결석' ) : '결석' %></td>
+                <% } %>
             </tr>
             <% }); %>
         </table>
