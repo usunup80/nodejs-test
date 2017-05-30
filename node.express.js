@@ -16,7 +16,7 @@ var app = express();
 //     response.send([{'id': 1, 'name': '이영훈'},{'id': 2, 'name': '장재혁'}]);
 // });
 
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
